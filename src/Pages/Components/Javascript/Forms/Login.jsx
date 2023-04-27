@@ -54,7 +54,7 @@ function Login({ loginShow, toggleLogin}) {
       const data=await res.json()
       document.getElementById('loginMessage').innerHTML=data.message
       if(res.status===201){
-        window.location.href='/'
+//         window.location.href='/'
       }
   }
 
