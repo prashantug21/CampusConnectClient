@@ -20,6 +20,7 @@ function SellForm() {
             }
         })
             .then((res) => {
+                alert(res.data.message)
                 window.location.reload();
             }).catch((err) => {
                 console.log(err)

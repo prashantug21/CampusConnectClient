@@ -5,13 +5,14 @@ import '../CSS/profile.css'
 import { FaRupeeSign } from 'react-icons/fa'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function Profile() {
     const [username1, setUsername1]=useState()
     const [email1, setEmail1]=useState()
     const [products, setProducts]=useState([])
     useEffect(() => {
-        axios.get('http://localhost:3001/dashboard', {
+        axios.get(`${BASE_URL}/dashboard`, {
             headers: {
               'Content-Type': 'application/json',
               'Authorization': 'Bearer ' + Cookies.get('jwtToken')
@@ -31,7 +32,7 @@ export default function Profile() {
           })
     }, [])
     async function MarkAsSold(itemid){
-      axios.delete(`http://localhost:3001/deleteProduct/:${itemid}`, {
+      axios.delete(`${BASE_URL}/deleteProduct/:${itemid}`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + Cookies.get('jwtToken')
@@ -40,6 +41,7 @@ export default function Profile() {
     ).then((res) => {
       const data = res.data;
       if (data.message=="Product deleted") {
+        alert(data.message)
         window.location.href = '/profile'
       } else {
         alert(data.message)
@@ -54,8 +56,8 @@ export default function Profile() {
   return (
     <div>
         <h1 className='display-1'>Profile</h1>
-        <p>Username:{username1}</p>
-        <p>Email:{email1}</p>
+        <p className='h1'>Username: </p><p>{username1}</p>
+        <p className='h1'>Email:</p><p> {email1}</p>
         <hr/>
         <h1 className='display-1'>Products</h1>
         <div className='product-grid'>

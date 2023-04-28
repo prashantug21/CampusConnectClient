@@ -10,14 +10,9 @@ import Cookies from 'js-cookie';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
-
-
-
-
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   useEffect(() => {
-    console.log(`${BASE_URL}/home`)
     axios.get(`${BASE_URL}/home`, {
       headers: {
         'Content-Type': 'application/json',

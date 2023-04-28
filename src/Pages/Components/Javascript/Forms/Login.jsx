@@ -6,6 +6,7 @@ import { ImCross } from 'react-icons/im'
 import { BsPersonCircle } from 'react-icons/bs'
 import axios from 'axios'
 import { Navigate, useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie'
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
@@ -52,6 +53,7 @@ function Login({ loginShow, toggleLogin}) {
         otp})
       })
       const data=await res.json()
+      Cookies.set('jwtToken', data.token)
       document.getElementById('loginMessage').innerHTML=data.message
       if(res.status===201){
 //         window.location.href='/'

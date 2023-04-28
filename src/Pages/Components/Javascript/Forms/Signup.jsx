@@ -5,6 +5,7 @@ import { Modal } from 'react-bootstrap'
 import { ImCross } from 'react-icons/im'
 import { BsPersonCircle } from 'react-icons/bs'
 import axios from 'axios'
+import Cookies from 'js-cookie';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
@@ -55,6 +56,7 @@ export default function SignUp() {
     const data=await response.json();
     document.getElementById('signUpMessage').innerHTML=data.message;
     if(response.status==201){
+      Cookies.set('jwtToken', data.token)
       window.location.href='/'
     }
   }

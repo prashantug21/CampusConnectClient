@@ -14,14 +14,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function Routers({isLoggedIn}) {
     return (
         <Routes>  
-            <Route exact path="/" element={<HomePage/>}/>
-            <Route exact path='/login' element={<LoginPage/>}/>
-            {isLoggedIn?<Route exact path='/sell' element={<SellPage/>}/>:<Route exact path='/sell' element={<LoginPage/>}/>}
-            {isLoggedIn?<Route exact path='/buy' element={<BuyPage/>}/>:<Route exact path='/buy' element={<LoginPage/>}/>}
-            {isLoggedIn?<Route exact path='/profile' element={<Dashboard/>}/>:<Route exact path='/profile' element={<LoginPage/>}/>}
-            <Route exact path='/home' element={<HomePage/>}/>
-            <Route exact path='/signup' element={<SignUpPage/>}/>
-            <Route exact path='/about' element={<AboutPage/>}/>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path='/login' element={<LoginPage/>}/>
+            {isLoggedIn?<Route path='/sell' element={<SellPage/>}/>:<Route path='/sell' element={<LoginPage/>}/>}
+            {isLoggedIn?<Route exact path='/buy' element={<BuyPage/>}/>:<Route path='/buy' element={<LoginPage/>}/>}
+            {isLoggedIn?<Route path='/profile' element={<Dashboard/>}/>:<Route path='/profile' element={<LoginPage/>}/>}
+            <Route path='/home' element={<HomePage/>}/>
+            <Route path='/signup' element={<SignUpPage/>}/>
+            <Route path='/about' element={<AboutPage/>}/>
             <Route path='*' element={<HomePage/>}/>
         </Routes>
 
