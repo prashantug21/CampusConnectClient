@@ -7,7 +7,7 @@ This is the client side repo of Campus connect
 
 ## Introduction
 
-Our platform is designed to connect buyers and sellers of pre-owned goods in a simple and convenient way. Its main focus is that colleges students can sell there various equiqments that they do not need more easily.The website only works for NIT Patna students as of now.
+Our platform is designed to connect buyers and sellers of pre-owned goods in a simple and convenient way. Its main focus is that colleges students can sell various equiqments that they do not need more easily.The website only works for NIT Patna students as of now.
 
 
 ## Installation
