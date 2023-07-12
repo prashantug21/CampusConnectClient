@@ -3,6 +3,10 @@
     background-color: antiquewhite;
     border-top: 1px solid black;
     width: 100%;
-    position: relative;
-    bottom: 0;
+    position:sticky;
+    top: 100%;
+}
+#github{
+    height: 10%;
+    background-color: black;
 }

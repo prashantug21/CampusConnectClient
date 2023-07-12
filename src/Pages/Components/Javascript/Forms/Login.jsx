@@ -53,16 +53,16 @@ function Login({ loginShow, toggleLogin}) {
         otp})
       })
       const data=await res.json()
-      Cookies.set('jwtToken', data.token)
+      Cookies.set('jwtToken', data.jwtToken)
       document.getElementById('loginMessage').innerHTML=data.message
       if(res.status===201){
-//         window.location.href='/'
+        window.location.href='/'
       }
   }
 
 
   return (
-    <div centered>
+    <div centered style={{minHeight:80+'vh'}}>
         <div id='loginForm' className='p-5 my-5 bg-dark text-white'>
         <BsPersonCircle className='d-block mt-5' id='person' />
       <Form onSubmit={SendOTP}>

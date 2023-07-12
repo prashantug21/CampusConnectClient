@@ -4,7 +4,7 @@ import '../CSS/About.css'
 
 export default function About() {
   return (
-    <div id='about'>
+    <div id='about' style={{minHeight:85+'vh',maxWidth:'1200px',margin:'0 auto'}}>
         <p>
         Welcome to Campus Connect, the online platform that connects college seniors with their junior counterparts, allowing them to buy and sell items within their own college community.</p><p>
         We understand the importance of making the most out of your college experience, and that often involves purchasing items from fellow students, whether it's textbooks, furniture, electronics, or clothing. That's why we created Campus Connect - to make it easy for seniors to connect with juniors and sell their items within their own college community.

@@ -27,7 +27,7 @@ function Buy() {
     };
 
     return (
-        <div>
+        <div style={{minHeight:80+'vh',maxWidth:'1200px',margin:'0 auto'}}>
             <h1>Buy</h1>
             <div className='product-grid'>
                 {products.map(product => (
@@ -43,7 +43,7 @@ function Buy() {
                             <Card.Text>
                             <p className='w-100'>{product.description}</p>
                             </Card.Text>
-                            <p className='productEmail h6'>Contact:  {product.email}</p>
+                            <p className='productEmail fs-4'>Contact:  {product.email}</p>
                         </Card.Body>
                     </Card>
                 ))}

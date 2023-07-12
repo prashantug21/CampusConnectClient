@@ -42,7 +42,7 @@ export default function Profile() {
       const data = res.data;
       if (data.message=="Product deleted") {
         alert(data.message)
-        window.location.href = '/profile'
+        window.location.href = '/'
       } else {
         alert(data.message)
         window.location.href = '/'

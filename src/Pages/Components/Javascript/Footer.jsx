@@ -9,7 +9,9 @@ export default function Footer() {
       <p>
       <AiOutlineCopyright />2023 Campus Connect. All rights reserved.
       </p>
-      <a href="#" id='contact' className='text-dark'>Contant us</a>
+      <div className=''>
+      <a href="https://github.com/prashantug21" target='_blank' id='contact' className='text-dark'>Developer Profile</a>
+      </div>
       </div>
     </div>
   )

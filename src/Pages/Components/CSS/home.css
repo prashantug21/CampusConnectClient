@@ -1,28 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
 
 #intro {
     background: #8e2de2;
     background: -webkit-linear-gradient(to bottom, #8e2de2, #4a00e0);
     background: linear-gradient(to bottom, #8e2de2, #4a00e0);
     margin-bottom: 1rem;
-    padding: 1rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px black solid;
+    padding: 4rem 1rem;
+    border-bottom: 3px black solid;
+    box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.4);
 }
 #details{
-    padding: 1rem;
+    margin: 0 auto;
+    /* overflow-x: hidden; */
+    font-family: 'Rubik', sans-serif;
 }
-#details div{
+#details div div{
     padding: 1rem;
     margin: 1rem;
     color: rgb(235, 237, 237);
-    background-image: linear-gradient(to bottom, #dcac69, #723ed8);
+    background-image: linear-gradient(to bottom, #6995dc, #723ed8);
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.4);
+}
+#details div{
+    width: 95%;
+    margin:0 auto;
 }
 #intro p {
     font-family: 'Rampart One', cursive;
-    max-width: 80rem;
+    max-width: 80%;
     margin: auto;
 }
 #detail1, #detail2{

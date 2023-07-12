@@ -5,6 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+
+}
+*,*::after,*::before{
+transition: all 0.3s ease-in-out;
+}
+
+body{
+  background: linear-gradient(to bottom,white,rgb(228, 223, 223));
+  background: -webkit-linear-gradient(to bottom,white,rgb(228, 223, 223));
+  /* color: rgb(255, 255, 255); */
+}
+html{
+  min-height: 100%;
 }
 
 code {

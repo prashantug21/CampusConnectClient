@@ -1,4 +1,6 @@
 #about{
-    font-size: 18px;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 500;
     padding: 2rem;
 }

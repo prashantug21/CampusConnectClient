@@ -54,16 +54,16 @@ export default function SignUp() {
       })
     })
     const data=await response.json();
+    Cookies.set('jwtToken', data.jwtToken)
     document.getElementById('signUpMessage').innerHTML=data.message;
     if(response.status==201){
-      Cookies.set('jwtToken', data.token)
       window.location.href='/'
     }
   }
 
 
   return (
-    <div>
+    <div centered style={{minHeight:80+'vh'}}>
     
         <div id='signUpForm' className='p-5 my-5 bg-dark text-white'
         >

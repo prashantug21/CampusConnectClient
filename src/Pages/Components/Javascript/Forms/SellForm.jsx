@@ -21,14 +21,14 @@ function SellForm() {
         })
             .then((res) => {
                 alert(res.data.message)
-                window.location.reload();
+                window.location.href = '/';
             }).catch((err) => {
                 console.log(err)
             })
     }
 
     return (
-        <div>
+        <div style={{minHeight:80+'vh',maxWidth:'1200px',margin:'0 auto'}}>
             <div id='sellPageHeading'>
                 Enter Product Details
             </div>
@@ -48,10 +48,9 @@ function SellForm() {
                     </Form.Group>
                     <Form.Group className='my-2' controlId='formBasicProductImage'>
                         <Form.Label className='mb-0'>Product Image</Form.Label>
-                        <Form.Control type="file" placeholder="Enter Product Image" autoComplete='off' onChange={async (e) => { const file = e.target.files[0];
+                        <Form.Control type="file" accept="image/png, image/jpeg, image/jpg" placeholder="Enter Product Image" autoComplete='off' onChange={async (e) => { const file = e.target.files[0];
     const reader = new FileReader();
     reader.onloadend = () => {
-        console.log(reader.result)
         setImage(reader.result);
     };
     reader.readAsDataURL(file);
