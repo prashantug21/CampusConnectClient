@@ -28,7 +28,7 @@ I created Campus Connect - to make it easy for seniors to connect with juniors a
 
 ## Installation
 
-1. Clone this repository for frontend:
+1. Clone this repository for client:
    ```bash
    git clone https://github.com/prashantug21/CampusConnectClient.git
    ```
@@ -37,12 +37,22 @@ I created Campus Connect - to make it easy for seniors to connect with juniors a
    git clone https://github.com/prashantug21/CampusConnectServer.git
    ```
 3. Make an environment variable file.
-4. Use:
+4. Install server dependencies:
+   ```bash
+   cd project-name/server
+   npm install
+   ```
+5.  Install client dependencies:
+   ```bash
+   cd project-name/client
+   npm install
+   ```
+6. Use:
    ```bash
    npm start
    ```
    to run the client.
-5. Use:
+7. Use:
    ```bash
    nodemon index.js
    ```
